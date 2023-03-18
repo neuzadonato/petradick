@@ -46,7 +46,7 @@ class PetsController extends Controller
     }
 
     /**
-     * Mostra o formulário para editar um gato específico
+     * Mostra o formulário para editar um pet específico
      */
     public function edit($id)
     {
