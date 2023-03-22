@@ -26,7 +26,10 @@ class PetsController extends Controller
      */
     public function create()
     {
-        //
+        // Quando o usuário acessa a rota '/pets/novo' o controller PetsController irá executar a função create. A função create irá retornar a view gatos.create.
+
+
+    return view('pets.create'. compact('pets'));
     }
 
     /**
