@@ -19,7 +19,7 @@ class Pet extends Model
      'idade',
      'sexo',
      'cor',
-     'petgrafia',
+     'petsgrafia',
      'foto'
  ];
 }
