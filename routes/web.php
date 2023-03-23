@@ -17,9 +17,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-// Rotas para o CRUD de gatos
+// Rotas para o CRUD de pets
 
-// Rota para a listagem de gatos
+// Rota para a listagem de pets
 Route::get('/pets', [PetsController::class, 'index'])->name('pets.index');
 
 // Rota para o formulário de criação de gatos
@@ -32,10 +32,10 @@ Route::get('/pets/{id}', [PetsController::class, 'show'])->name('Pets.show');
 Route::get('/pets/{id}/edit', [PetsController::class, 'edit'])->name('pets.edit');
 
 // Rota que armazena um novo gato no banco de dados
-Route::post('/gatos', [GatosController::class, 'store'])->name('gatos.store');
+Route::post('/pets', [PetsController::class, 'store'])->name('pets.store');
 
 // Rota que atualiza um gato específico no banco de dados
-Route::put('/gatos/{id}', [GatosController::class, 'update'])->name('gatos.update');
+Route::put('/pets/{id}', [PetsController::class, 'update'])->name('pets.update');
 
 // Rota que remove um gato específico do banco de dados
-Route::delete('/gatos/{id}', [GatosController::class, 'destroy'])->name('gatos.destroy');
+Route::delete('/pets/{id}', [PetsController::class, 'destroy'])->name('pets.destroy');

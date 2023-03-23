@@ -35,9 +35,27 @@ class PetsController extends Controller
     /**
      * Armazena um novo pet
      */
-    public function store(Request $request)
+    
+    public function store(Request $requisicao)
+
     {
-        //
+        // cria um novo objeto do tipo pets em branco
+        $pet = new Pet();
+
+        // preenche os camposdo objeto com os dados da requisição
+        $pet->nome = $requisicao->nome;
+        $pet->raca = $requisicao->raca;
+        $pet->idade = $requisicao->idade;
+        $pet->sexo = $requisicao->sexo;
+        $pet->cor = $requisicao->cor;
+        $pet->pesgrafia = $requisicao->petsgrafia;
+
+        // Salva o objeto no banco de dados 
+        $pet->save();
+
+        // Redireciona para a página de detalhes do pet
+        return redirect()->route('pets.show', $pet->id);
+
     }
 
     /**
