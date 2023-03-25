@@ -62,11 +62,10 @@ class PetsController extends Controller
 
     public function show(Pet $pet)
     {
-   return view('pets.show', compact('pet'));   
+        return view('pets.show', compact('pet'));   
 
     }
-    }
-
+    
     /**
      * Mostra o formulário para editar um pet específico
      */
