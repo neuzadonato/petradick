@@ -20,8 +20,8 @@ return new class extends Migration
             $table->integer('idade');
             $table->string('sexo', 100);
             $table->string('cor', 100);
-            $table->string('petgrafia', 100);
-            $table->string('foto', 100);
+            $table->string('petsgrafia', 100);
+            $table->string('foto', 100)->nullable();
             $table->timestamps();
         });
     }

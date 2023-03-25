@@ -26,7 +26,7 @@ Route::get('/pets', [PetsController::class, 'index'])->name('pets.index');
 Route::get('/pets/create', [PetsController::class, 'create'])->name('pets.create');
 
 // Rota para o mostrar um gato específico
-Route::get('/pets/{id}', [PetsController::class, 'show'])->name('Pets.show');
+Route::get('/pets/{id}', [PetsController::class, 'show'])->name('pets.show');
 
 // Rota para o formulário de edição de gatos
 Route::get('/pets/{id}/edit', [PetsController::class, 'edit'])->name('pets.edit');

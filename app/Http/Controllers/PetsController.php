@@ -46,7 +46,7 @@ class PetsController extends Controller
         $pet->idade = $requisicao->idade;
         $pet->sexo = $requisicao->sexo;
         $pet->cor = $requisicao->cor;
-        $pet->pesgrafia = $requisicao->petsgrafia;
+        $pet->petsgrafia = $requisicao->petsgrafia;
 
         // Salva o objeto no banco de dados 
         $pet->save();
@@ -59,25 +59,33 @@ class PetsController extends Controller
     /**
      * Mostra um pet específico
      */
-    public function show($id)
+
+    public function show(Pet $pet)
     {
-        //
+   return view('pets.show', compact('pet'));   
+
+    }
     }
 
     /**
      * Mostra o formulário para editar um pet específico
      */
-    public function edit($id)
+    public function edit(Pet $pet)
     {
-        //
+        // Retorna a view pets.edit com o objeto $pet
+        return view('pets.edit', compact('pet'));
     }
 
     /**
      * Atualiza um pet específico
      */
-    public function update(Request $request, $id)
+    public function update(Request $requisicao, Pet $pet)
     {
-        //
+        //Atualiza o objeto com os dadosda requisição
+        $pet ->update($requisicao->all());
+
+        // Redireciona para a página de detalhes do gato
+        return redirect()->route('pets.show', $pet->id);
     }
 
     /**

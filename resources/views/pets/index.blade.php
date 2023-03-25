@@ -21,7 +21,7 @@
                     <th>idade</th>                    
                     <th>Sexo</th>
                     <th>Cor</th>
-                    <th>petgrafia</th>
+                    <th>petsgrafia</th>
                     <th>foto</th>              
 
                     <th></th>                  
